@@ -21,7 +21,9 @@ could continue on operating in parallel.
 * Dito for raising an exception for sending in values other than 'high', 'low' and
 None
 
+
 Setting up a binary search in the range 0-100 inclusive and starting at 50.
+    >>> from binary_search import binary_search
     >>> bs = binary_search(x_current=5, x_min=0, x_max=10)
     >>> bs
     <generator object binary_search at 0x106ce7468>
