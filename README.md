@@ -20,3 +20,20 @@ let the searcher keep repeating the last value.  This way the x and y searches
 could continue on operating in parallel.
 * Dito for raising an exception for sending in values other than 'high', 'low' and
 None
+
+Setting up a binary search in the range 0-100 inclusive and starting at 50.
+    >>> bs = binary_search(x_current=5, x_min=0, x_max=10)
+    >>> bs
+    <generator object binary_search at 0x106ce7468>
+
+    Prime the generator.
+    >>> bs.send(None)
+    5
+
+    Start searching.
+    >>> bs.send('low')
+    2
+    >>> bs.send('high')
+    4
+    >>> bs.send('low')
+    3
